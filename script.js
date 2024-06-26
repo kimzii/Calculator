@@ -41,6 +41,13 @@ document.querySelector('.percent').addEventListener('click', () => {
     numdisplay.textContent = operand1;
 })
 
+document.querySelector('.delete').addEventListener('click', () => {
+    if (currentValue.length > 0) {
+        currentValue = currentValue.slice(0, -1); 
+        numdisplay.textContent = currentValue === '' ? '0' : currentValue; 
+    }
+});
+
 function operate() {
     if (operand1 !== null && operand2 !== null) {
         let result;
